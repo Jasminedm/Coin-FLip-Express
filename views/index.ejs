@@ -8,11 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>21 Savage</h1>
-  <h2>Why you trappin so hard?</h2>
-
-
-  <h3>Messages</h3>
+  <h1>Coin Flip</h1>
+ 
   <ul class="messages">
   <% for(var i=0; i<flipR.length; i++) {%>
     <li class="message">
@@ -26,7 +23,7 @@
   <% } %>
   </ul>
 
-  <h2>Coin Flip</h2> 
+  <h2>Choose Heads or Tails</h2> 
 
   <form action="/yourFlip" method="POST">
     <input type="text" placeholder="name" name="userFlip">

@@ -1,6 +1,10 @@
 body{
   background: rgb(176, 115, 115);
+  text-align: center;
 }
 h3{
   margin-top: 40px;
+}
+li{
+  list-style-type: none;
 }
