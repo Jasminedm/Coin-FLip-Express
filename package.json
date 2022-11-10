@@ -20,5 +20,8 @@
   "devDependencies": {
     "minimist": ">=1.2.2",
     "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
   }
 }

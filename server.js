@@ -45,7 +45,7 @@ app.post('/yourFlip', (req, res) => {
   }
 
   db.collection('yourFlip').insertOne(
-    {userFlip: req.body.userFlip, result: botResult, winOrLose: outcome}, 
+    {userFlip:`You Chose ${req.body.userFlip}`, result: `The Coin Landed On ${botResult}`, winOrLose: outcome}, 
     (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
@@ -68,6 +68,7 @@ app.put('/yourFlip', (req, res) => {
  })
 
 app.delete('/yourFlip', (req, res) => {
+  console.log(req.body)
   db.collection('yourFlip').findOneAndDelete(
     {userFlip: req.body.userFlip, result: req.body.result, winOrLose: req.body.winOrLose}, 
     (err, result) => {

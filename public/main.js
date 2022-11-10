@@ -27,9 +27,9 @@ Array.from(thumbUp).forEach(function(element) {
 
 Array.from(trash).forEach(function(element) {
       element.addEventListener('click', function(){
-        const userFlip = this.parentNode.parentNode.childNodes[1].innerText
-        const result = this.parentNode.parentNode.childNodes[3].innerText
-        const winOrLose = this.parentNode.parentNode.childNodes[5].innerText
+        const userFlip = this.parentNode.parentNode.childNodes[1].innerText.trim()
+        const result = this.parentNode.parentNode.childNodes[3].innerText.trim()
+        const winOrLose = this.parentNode.parentNode.childNodes[5].innerText.trim()
         fetch('yourFlip', {
           method: 'delete',
           headers: {
